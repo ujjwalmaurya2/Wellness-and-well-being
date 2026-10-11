@@ -17,6 +17,7 @@ import Footer from './components/Footer';
 import WhatsAppFloatingButton from './components/WhatsAppFloatingButton';
 import ClientInfoModal from './components/ClientInfoModal';
 import WellnessDashboard from './components/dashboard/WellnessDashboard';
+import BottomNav from './components/BottomNav';
 
 export default function App() {
   const [clientInfoOpen, setClientInfoOpen] = useState(false);
@@ -117,7 +118,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-ivory text-charcoal flex flex-col font-sans selection:bg-freshGreen/25 selection:text-forest">
+    <div className="min-h-screen bg-ivory text-charcoal flex flex-col font-sans selection:bg-freshGreen/25 selection:text-forest pb-16 lg:pb-0">
       {/* Client Demo Agency Top Banner */}
       <ClientDemoBanner onOpenInfo={() => setClientInfoOpen(true)} />
 
@@ -184,8 +185,15 @@ export default function App() {
       {/* SECTION 14: Dark Forest-Green Footer */}
       <Footer onBookClick={() => scrollToBooking()} />
 
-      {/* Persistent Floating WhatsApp Help Button */}
+      {/* Persistent Floating WhatsApp Help Button (Positioned above bottom nav on mobile) */}
       <WhatsAppFloatingButton />
+
+      {/* Native App-Style Bottom Navigation Bar (Mobile & Tablet) */}
+      <BottomNav
+        currentView={currentView}
+        onNavigate={navigateTo}
+        onBookClick={() => scrollToBooking()}
+      />
 
       {/* iWAAT Client Presentation Concept Dossier Modal */}
       <ClientInfoModal

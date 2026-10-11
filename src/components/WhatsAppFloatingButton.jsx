@@ -3,11 +3,11 @@ import { MessageCircle, X } from 'lucide-react';
 import { BRAND } from '../data/content';
 
 export default function WhatsAppFloatingButton() {
-  const [showTooltip, setShowTooltip] = useState(true);
+  const [showTooltip, setShowTooltip] = useState(false); // Default closed on mobile to prevent blocking screen
 
   return (
-    <div className="fixed bottom-6 right-6 z-40 flex flex-col items-end">
-      {/* Interactive Tooltip Callout */}
+    <div className="fixed bottom-20 right-4 sm:bottom-6 sm:right-6 z-40 flex flex-col items-end">
+      {/* Interactive Tooltip Callout (Shows on desktop or when tapped) */}
       {showTooltip && (
         <div className="mb-2 bg-white rounded-2xl p-3 shadow-elevated border border-sage/60 max-w-xs text-left animate-fadeIn relative">
           <button
@@ -36,11 +36,12 @@ export default function WhatsAppFloatingButton() {
         )}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="w-14 h-14 rounded-full bg-freshGreen hover:bg-forest text-white shadow-elevated flex items-center justify-center transition-all duration-300 transform hover:scale-110 active:scale-95 group focus:outline-none focus:ring-4 focus:ring-freshGreen/30"
+        className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-freshGreen hover:bg-forest text-white shadow-[0_6px_20px_rgba(113,150,107,0.35)] flex items-center justify-center transition-all duration-300 transform hover:scale-110 active:scale-95 group focus:outline-none focus:ring-4 focus:ring-freshGreen/30 relative"
         aria-label="Direct WhatsApp Consultation"
+        title="Chat directly on WhatsApp"
       >
-        <MessageCircle className="w-7 h-7 fill-white/20 group-hover:scale-110 transition-transform" />
-        <span className="absolute -top-1 -right-1 w-4 h-4 bg-coral rounded-full border-2 border-white animate-pulse"></span>
+        <MessageCircle className="w-6 h-6 sm:w-7 sm:h-7 fill-white/20 group-hover:scale-110 transition-transform" />
+        <span className="absolute -top-1 -right-1 w-3.5 h-3.5 bg-coral rounded-full border-2 border-white animate-pulse"></span>
       </a>
     </div>
   );

@@ -37,7 +37,7 @@ export default function NutritionistProfile({ onBookClick }) {
   ];
 
   return (
-    <section id="approach" className="py-16 sm:py-24 bg-sage-50/50 relative border-t border-sage/40">
+    <section id="approach" className="py-10 sm:py-16 lg:py-24 bg-sage-50/50 relative border-t border-sage/40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
@@ -95,37 +95,37 @@ export default function NutritionistProfile({ onBookClick }) {
                 <span>Meet Your Practitioner</span>
               </div>
 
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-charcoal tracking-tight leading-tight">
+              <h2 className="text-2xl sm:text-3xl lg:text-5xl font-extrabold text-charcoal tracking-tight leading-tight">
                 Nutrition That Fits Your Real Life
               </h2>
 
-              <p className="text-base sm:text-lg text-charcoal-muted leading-relaxed font-normal">
+              <p className="text-xs sm:text-base text-charcoal/80 leading-relaxed font-normal italic">
                 "Good nutrition should work with your lifestyle, food preferences, and everyday routine — not against them."
               </p>
             </div>
 
-            <p className="text-sm sm:text-base text-charcoal leading-relaxed">
+            <p className="text-xs sm:text-base text-charcoal/80 leading-relaxed">
               Every body operates on unique biochemical rhythms. Rather than enforcing generic, imported diet templates or starvation regimes, my practice harmonizes modern nutritional science with wholesome Indian culinary wisdom. Together, we co-create sustainable routines that you can joyfully maintain for decades.
             </p>
 
-            {/* 4 Practice Pillars */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            {/* 4 Practice Pillars in 2-Col on mobile */}
+            <div className="grid grid-cols-2 gap-2.5 sm:gap-4 pt-1">
               {pillars.map((pillar, idx) => {
                 const IconComp = pillar.icon;
                 return (
                   <div
                     key={idx}
-                    className="p-4 rounded-2xl bg-white border border-sage/50 shadow-sm space-y-1.5"
+                    className="p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-white border border-sage/50 shadow-2xs space-y-1"
                   >
-                    <div className="flex items-center gap-2.5">
-                      <div className={`w-8 h-8 rounded-lg ${pillar.bg} flex items-center justify-center shrink-0`}>
-                        <IconComp className={`w-4 h-4 ${pillar.color}`} />
+                    <div className="flex items-center gap-2">
+                      <div className={`w-7 h-7 sm:w-8 sm:h-8 rounded-lg ${pillar.bg} flex items-center justify-center shrink-0`}>
+                        <IconComp className={`w-3.5 h-3.5 sm:w-4 sm:h-4 ${pillar.color}`} />
                       </div>
-                      <h4 className="text-xs sm:text-sm font-bold text-charcoal">
+                      <h4 className="text-[11px] sm:text-xs font-bold text-charcoal leading-tight">
                         {pillar.title}
                       </h4>
                     </div>
-                    <p className="text-xs text-charcoal-muted leading-relaxed">
+                    <p className="text-[10px] sm:text-xs text-charcoal/70 leading-tight">
                       {pillar.desc}
                     </p>
                   </div>

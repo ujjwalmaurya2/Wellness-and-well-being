@@ -106,25 +106,25 @@ export default function BookingSection({ prefilledData }) {
   };
 
   return (
-    <section id="book" className="py-16 sm:py-24 bg-white relative">
+    <section id="book" className="py-10 sm:py-16 lg:py-24 bg-white relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14 space-y-4">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sage/60 text-forest text-xs font-semibold uppercase tracking-wider">
+        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-14 space-y-2 sm:space-y-3">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sage/60 text-forest text-[11px] sm:text-xs font-semibold uppercase tracking-wider">
             <Calendar className="w-3.5 h-3.5 text-warmYellow-dark" />
             <span>Consultation Booking</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-charcoal tracking-tight">
-            Take the First Step Towards Sustainable Health
+          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-extrabold text-charcoal tracking-tight leading-tight">
+            Take the First Step Towards Health
           </h2>
-          <p className="text-base sm:text-lg text-charcoal-muted leading-relaxed">
+          <p className="text-xs sm:text-base text-charcoal/75 leading-relaxed">
             Schedule your deep-dive 1-on-1 consultation or connect instantly via WhatsApp.
           </p>
         </div>
 
         {/* Split Layout Container */}
-        <div className="bg-ivory rounded-4xl p-6 sm:p-10 lg:p-12 border border-sage/60 shadow-card">
+        <div className="bg-ivory rounded-2xl sm:rounded-4xl p-4 sm:p-10 lg:p-12 border border-sage/60 shadow-card">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
             
             {/* Left Column: Welcoming Information & Image */}

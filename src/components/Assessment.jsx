@@ -114,22 +114,22 @@ export default function Assessment({ onBookWithPreferences }) {
   const rec = getRecommendation();
 
   return (
-    <section id="assessment" className="py-16 sm:py-24 bg-white relative overflow-hidden">
+    <section id="assessment" className="py-10 sm:py-16 lg:py-24 bg-white relative overflow-hidden">
       {/* Decorative background circle */}
       <div className="absolute -top-20 -right-20 w-80 h-80 bg-sage/20 rounded-full blur-3xl pointer-events-none"></div>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-10 space-y-3">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sage/50 text-forest text-xs font-semibold uppercase tracking-wider">
+        <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-10 space-y-2 sm:space-y-3">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sage/50 text-forest text-[11px] sm:text-xs font-semibold uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5 text-freshGreen" />
             <span>Interactive Nutrition Quiz</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-charcoal tracking-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-charcoal tracking-tight leading-tight">
             Your Wellness Journey Starts Here
           </h2>
-          <p className="text-base text-charcoal-muted">
+          <p className="text-xs sm:text-base text-charcoal/75">
             Tell us a little about your goals so we can help you choose the right next step.
           </p>
         </div>

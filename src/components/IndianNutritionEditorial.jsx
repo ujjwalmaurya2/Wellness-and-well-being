@@ -8,53 +8,53 @@ export default function IndianNutritionEditorial() {
   const activeComponent = THALI_EXPLORER.components.find((c) => c.id === activeTab) || THALI_EXPLORER.components[0];
 
   return (
-    <section id="indian-plate" className="py-16 sm:py-24 bg-ivory-200/50 relative border-t border-sage/40">
+    <section id="indian-plate" className="py-10 sm:py-16 lg:py-24 bg-ivory-200/50 relative border-t border-sage/40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14 space-y-4">
-          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-freshGreen/15 text-forest text-xs font-semibold uppercase tracking-wider">
+        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-14 space-y-2 sm:space-y-3">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-freshGreen/15 text-forest text-[11px] sm:text-xs font-semibold uppercase tracking-wider">
             <Utensils className="w-3.5 h-3.5 text-freshGreen" />
             <span>Rooted in Indian Culture</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-charcoal tracking-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-extrabold text-charcoal tracking-tight leading-tight">
             Healthy Eating, Made for Real Life
           </h2>
-          <p className="text-base sm:text-lg text-charcoal-muted leading-relaxed">
+          <p className="text-xs sm:text-base text-charcoal/75 leading-relaxed">
             Practical nutrition ideas that respect your routine, family traditions, and familiar foods. No crash cuts. No exotic superfood mandates.
           </p>
         </div>
 
         {/* 3 Rich Visual Editorial Content Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8 mb-8 sm:mb-16">
           {INDIAN_LIFE_CARDS.map((card) => (
             <div
               key={card.id}
-              className="bg-white rounded-3xl overflow-hidden border border-sage/60 hover:border-freshGreen/40 shadow-soft hover:shadow-card transition-all duration-300 flex flex-col group"
+              className="bg-white rounded-2xl sm:rounded-3xl overflow-hidden border border-sage/60 hover:border-freshGreen/40 shadow-soft hover:shadow-card transition-all duration-300 flex flex-col group text-left"
             >
               {/* Image Frame */}
-              <div className="relative h-60 overflow-hidden bg-sage/20">
+              <div className="relative h-44 sm:h-60 overflow-hidden bg-sage/20">
                 <img
                   src={card.image}
                   alt={card.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
-                <span className="absolute top-4 left-4 text-xs font-bold px-3 py-1 rounded-full bg-white/95 text-forest shadow-sm backdrop-blur-md">
+                <span className="absolute top-3 left-3 text-[11px] sm:text-xs font-bold px-2.5 py-0.5 rounded-full bg-white/95 text-forest shadow-xs backdrop-blur-md">
                   {card.tag}
                 </span>
               </div>
 
               {/* Card Body */}
-              <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-4">
-                <div className="space-y-2">
-                  <span className="text-xs font-semibold text-charcoal-muted uppercase tracking-wider">
+              <div className="p-4 sm:p-7 flex-1 flex flex-col justify-between space-y-3">
+                <div className="space-y-1.5">
+                  <span className="text-[10px] sm:text-xs font-semibold text-charcoal-muted uppercase tracking-wider">
                     {card.subtitle}
                   </span>
-                  <h3 className="text-xl font-bold text-charcoal group-hover:text-forest transition-colors">
+                  <h3 className="text-base sm:text-xl font-bold text-charcoal group-hover:text-forest transition-colors leading-snug">
                     {card.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-charcoal leading-relaxed pt-1">
+                  <p className="text-xs sm:text-sm text-charcoal/80 leading-relaxed pt-0.5">
                     {card.description}
                   </p>
                 </div>
@@ -76,8 +76,8 @@ export default function IndianNutritionEditorial() {
         </div>
 
         {/* INTERACTIVE SHOWSTOPPER: The Balanced Indian Plate (Thali) Explorer */}
-        <div className="bg-white rounded-3xl p-6 sm:p-10 border-2 border-sage/60 shadow-card">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-10 border-2 border-sage/60 shadow-card">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
             
             {/* Left: Thali Photograph with Interactive Overlays */}
             <div className="lg:col-span-5 relative">
